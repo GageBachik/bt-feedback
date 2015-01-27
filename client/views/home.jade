@@ -1,0 +1,9 @@
+template(name="home")
+	.bar.bar-header.bar-light
+		h1.title Feedback
+	br
+	br
+	br
+	+loginButtons
+	p Me:
+		img(src="#{currentUser.services.twitter.profile_image_url}")
