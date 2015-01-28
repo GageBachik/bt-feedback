@@ -1,9 +1,31 @@
 template(name="home")
-	.bar.bar-header.bar-light
-		h1.title Feedback
-	br
-	br
-	br
-	+loginButtons
-	p Me:
-		img(src="#{currentUser.services.twitter.profile_image_url}")
+	.home-container
+
+		.bar.bar-header.bar-stable
+			.title Feedback
+
+		.content
+			.button-bar.bar-dark
+				a.button.form-type.active Pending
+				a.button.form-type Personal
+
+			if pending
+				.list
+					if clicked
+						+survey
+					else
+						a.item.survey(href='#') Alex Bogusky
+			else
+				+personal
+
+template(name="personal")
+
+template(name="survey")
+	li.item.item-divider How do you rate the experience overall?
+	li.item.range.range-assertive
+		i.icon.ion-sad    
+		input(type='range', name='volume', min='0', max='100', value='50')
+		i.icon.ion-happy-outline
+	label.item.item-input
+		input(type='text' cols="40", rows="5", placeholder='What is some general feedback?')
+	.button.button-block.button-dark.no-margin submit
