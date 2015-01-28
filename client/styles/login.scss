@@ -1,6 +1,10 @@
 .container{
-	background: #E19A64;
+	// background: #E19A64;
 	height: 100%;
+}
+
+.bar.bar-stable .title {
+	color: #676767 !important;
 }
 
 .feedback{
@@ -8,7 +12,7 @@
 }
 
 .centered{
-	padding-top: 75px;
+	padding-top: 35%;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -28,5 +32,16 @@
 }
 
 #login-buttons-twitter{
-	background: #505D73 !important;
+	background: rgba(234, 132, 69, 0.9) !important;
+	color: #FFFFFF !important;
+	border: none !important;
+	transform: scale(1.3);
+}
+
+#login-buttons .login-image{
+	display: none !important;
+}
+
+#login-buttons .text-besides-image{
+	margin-left: 0px !important;
 }

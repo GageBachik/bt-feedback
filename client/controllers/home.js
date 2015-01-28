@@ -23,6 +23,7 @@ Template.home.events({
 		}
 	},
 	'click .survey': function(event){
+		$('.button-bar').toggle();
 		Session.set('clicked', true);
 	}
 });
